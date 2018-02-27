@@ -1,6 +1,7 @@
 # Личный проект «Нёрдс»
 
 * Студент: [Александр Кузнецов](https://up.htmlacademy.ru/htmlcss/20/user/606417).
+* Наставник: [Наталья Налимова](https://htmlacademy.ru/profile/tuetfe).
 
 ---
 
