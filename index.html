@@ -8,7 +8,7 @@
         <header class="main-header">
             <nav class="main-navigation">
                 <a class="main-header-logo">
-                    <img src="http://placehold.it/60x30" width="60" height="30" alt="Логотип «Nerds»">
+                    <img src="http://placehold.it/60x30" width="60" height="30" alt="Веб-студия «Nerds»">
                 </a>
                 <ul class="site-navigation">
                     <li>
@@ -24,46 +24,45 @@
                         <a href="#">Контакты</a>
                     </li>
                 </ul>
-                <ul class="basket-navigation">
-                    <li class="basket">Корзина</li>
-                </ul>
+            
+                <a class="basket" href="#">Корзина</a>
             </nav>
         </header>
-        <main class="container">
+        <main>
             
             <h1 class="visually-hidden">Веб-студия «Nerds»</h1>
             
             <section class="top-slider">
                 
-                <h2 class="visually-hidden">Получить больше информации</h2>
+                <h2 class="visually-hidden">Наши преимущества</h2>
                 
                 <ul class="top-slider-banner">
                     <li>
-                        <lable for="top-slider-banner-1">
-                            <h3>Долго, дорого, скрупулезно</h3>
+                        <div>   
+                            <b>Долго, дорого, скрупулезно</b>
                             <p>Математически выверенный дизайн для вашего сайта или мобильного приложения.</p>
-                            <img src="http://placehold.it/240x140" width="240" height="140" alt="Первый баннер слайдера">
-                            <a class="button" href="#">Узнать больше</a>
-                        </lable>
-                        <input type="radio" id="top-slider-banner-1" class="radio-button">
+                        </div>    
+                            <img src="http://placehold.it/240x140" width="240" height="140" alt="">
+                            <a class="button button-red" href="#">Узнать больше</a>
+                        <!-- здесь будет radio-buttom -->
                     </li>
                     <li>
-                        <lable for="top-slider-banner-2">
-                            <h3>Любим математику как никто другой</h3>
+                        <div>
+                            <b>Любим математику как никто другой</b>
                             <p>Никакого креатива, только математические формулы для расчета идеальных пропорций.</p>
-                            <img src="http://placehold.it/240x140" width="240" height="140" alt="Второй баннер слайдера">                           
-                            <a class="button" href="#">Узнать больше</a>
-                        </lable>
-                        <input type="radio" id="top-slider-banner-2" class="radio-button">
+                        </div>    
+                            <img src="http://placehold.it/240x140" width="240" height="140" alt="">                           
+                            <a class="button button-red" href="#">Узнать больше</a>
+                        <!-- здесь будет radio-buttom -->
                     </li>
                     <li>
-                        <lable for="top-slider-banner-3">
-                            <h3>Только ночь, только хардкор</h3>
+                        <div>
+                            <b>Только ночь, только хардкор</b>
                             <p>Работать днем, как все? Мы против этого. Ближе к полуночи работа только начинается.</p>
-                            <img src="http://placehold.it/240x140" width="240" height="140" alt="Третий баннер слайдера">                            
-                            <a class="button" href="#">Узнать больше</a>
-                        </lable>
-                        <input type="radio" id="top-slider-banner-3" class="radio-button"> 
+                        </div>    
+                            <img src="http://placehold.it/240x140" width="240" height="140" alt="">                            
+                            <a class="button button-red" href="#">Узнать больше</a>
+                        <!-- здесь будет radio-buttom -->
                     </li>
                 </ul>
             </section>
@@ -79,7 +78,7 @@
                         <p>
                             Мир никогда не будет прежним после того как увидит ваш сайт!
                         </p>
-                        <a class="button button-catalog button-catalog-btn1" href="#">Заказать</a>
+                        <a class="button button-catalog button-red" href="#">Заказать</a>
                     </li>
                     <li>
                         <h3>Приложения</h3>
@@ -87,7 +86,7 @@
                         <p>
                             Покорите топ-10 приложений в AppStore и Google Play
                         </p>
-                        <a class="button button-catalog button-catalog-btn2" href="#">Заказать</a>
+                        <a class="button button-catalog button-green" href="#">Заказать</a>
                     </li>
                     <li>
                         <h3>Презентации</h3>
@@ -95,7 +94,7 @@
                         <p>
                             Вы даже не подозреваете, насколько вы изумительны!
                         </p>
-                        <a class="button button-catalog button-catalog-btn3" href="#">Заказать</a>
+                        <a class="button button-catalog button-yellow" href="#">Заказать</a>
                     </li>
                 </ul>
             </section>
@@ -108,7 +107,7 @@
                     <p>
                         Исповедуем принципы минимализма и чистоты. Ставим математический расчет превыше креатива. Работаем не покладая рук, как роботы.
                     </p>
-                    <b>Выполняем заказы на разработку:</b>
+                    <b class="about-us-title">Выполняем заказы на разработку:</b>
                     <ul class="services">
                         <li>Веб-сайтов любой сложности</li>
                         <li>Мобильных приложений для iOS и Android</li>
@@ -117,21 +116,22 @@
                 </div>
                 <div class="about-us-right">
                     <table class="info">
-                        <caption>с 2004 года любим точность во всем:</caption>
+                        <caption>
+                            <b class="about-us-title">с 2004 года любим точность во всем:</b>
+                        </caption>
                         <tr>
                             <td>146<sup>%</sup></td>
-                            <td>Уровень самоотдачи</td>
+                            <th>Уровень самоотдачи</th>
                         </tr>
                         <tr>
                             <td>100<sup>%</sup></td>
-                            <td>Соблюдение сроков</td>
+                            <th>Соблюдение сроков</th>
                         </tr>
                         <tr>
                             <td>50<sup>%</sup></td>
-                            <td>Минимальная предоплата</td>
+                            <th>Минимальная предоплата</th>
                         </tr>                        
-                    </table>
-                    <img src="http://placehold.it/130x70" width="130" height="70" alt="Логотип «Nerds» в цвете">                    
+                    </table>                   
                 </div>
             </section>
             
@@ -142,22 +142,22 @@
                 <ul class="partners-list">
                     <li>
                         <a href="https://htmlacademy.ru/intensive/htmlcss">
-                            <img src="http://placehold.it/70x30" width="70" height="30" alt="Логотип «Html academy»">
+                            <img src="http://placehold.it/70x30" width="70" height="30" alt="«Html academy»">
                         </a>
                     </li>
                     <li>
                         <a href="#">
-                            <img src="http://placehold.it/70x30" width="70" height="30" alt="Логотип «Borodinski»">
+                            <img src="http://placehold.it/70x30" width="70" height="30" alt="«Borodinski»">
                         </a>
                     </li>
                     <li>
                         <a href="#">
-                            <img src="http://placehold.it/70x30" width="70" height="30" alt="Логотип «Pink»">
+                            <img src="http://placehold.it/70x30" width="70" height="30" alt="«Pink»">
                         </a>
                     </li>
                     <li>
                         <a href="#">
-                            <img src="http://placehold.it/70x30" width="70" height="30" alt="Логотип «Mishka»">
+                            <img src="http://placehold.it/70x30" width="70" height="30" alt="«Mishka»">
                         </a>
                     </li>
                 </ul>
@@ -168,19 +168,17 @@
                 <h2 class="visually-hidden">Контактная информация</h2>
              
                 <img src="http://placehold.it/500x140" width="500" height="140" alt="Карта">
-                <div class="marker">
-                    <img src="http://placehold.it/500x140" width="60" height="60" alt="Маркер">
-                </div>
-                <div class="adress">
+
+                <div class="address">
                     <b>Nerds design studio</b>
                     <p>
                         191186, Санкт-Петербург,<br> 
                         ул. Б. Конюшенная, д. 19/8
                     </p>
                     <p>
-                        тел. +7 (812) 275-75-75
+                        <a href="tel:+78122757575">тел. +7 (812) 275-75-75</a>
                     </p>
-                    <a class="write-button" href="#">Напишите нам</a>
+                    <a class="button button-red" href="#">Напишите нам</a>
                 </div>
             </section> 
             
@@ -188,13 +186,19 @@
                 <div class="footer-social">
                     <ul class="footer-social-list">
                         <li>
-                            <a class="social-button" href="#">Вконтакте</a>
+                            <a class="social-button" href="#">
+                                <span class="visually-hidden">Вконтакте</span>
+                            </a>
                         </li>
                         <li>
-                            <a class="social-button" href="#">Фейсбук</a>
+                            <a class="social-button" href="#">
+                                <span class="visually-hidden">Фейсбук</span>
+                            </a>
                         </li>
                         <li>
-                            <a class="social-button" href="#">Инстаграм</a>
+                            <a class="social-button" href="#">
+                                <span class="visually-hidden">Инстаграм</span>
+                            </a>
                         </li>
                     </ul>
                 </div>
