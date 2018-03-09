@@ -34,8 +34,59 @@
             <h1>Магазин готовых шаблонов</h1>
             
             <section class="filters">
-                <h2 class="visually-hidden">Фильтры</h2>
-            <!-- Здесь будет форма -->    
+                <form action="https://echo.htmlacademy.ru" method="post" oninput="outсost.value=cost.value">
+                    <h2 class="visually-hidden">Фильтры</h2>
+                    <fieldset>
+                        <legend>Стоимость:</legend>
+                        <label class="visually-hidden" for="filter-cost">Выбор из диапазона</label>
+            <!-- javascript -->
+                        От
+                        <input class="visually-hidden" type="range" id="filter-cost" name="cost" min="0" max="15000" step="1">
+                        До
+                        <output name="outсost">15000</output>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Сетка:</legend>
+                        <li class="filter-option">
+                            <input class="visually-hidden filter-input filter-input-radio" type="radio" name="grid-group" value="adaptive" id="filter-adaptive" checked>
+                            <label for="filter-adaptive">Адаптивная</label>
+                        </li> 
+                        <li class="filter-option">
+                            <input class="visually-hidden filter-input filter-input-radio" type="radio" name="grid-group" value="fixed" id="filter-fixed">
+                            <label for="filter-fixed">Фиксированная</label>
+                        </li>
+                        <li class="filter-option">
+                            <input class="visually-hidden filter-input filter-input-radio" type="radio" name="grid-group" value="rubber" id="filter-rubber">
+                            <label for="filter-rubber">Резиновая</label>
+                        </li>                    
+                    </fieldset>
+                    <fieldset>
+                        <legend>Особенности:</legend>
+                        <ul>
+                            <li class="filter-option">
+                                <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="slider" id="filter-slider" checked>
+                                <label for="filter-slider">Слайдер</label>
+                            </li>
+                            <li class="filter-option">
+                                <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="block-advantages" id="filter-block-advantages">
+                                <label for="filter-block-advantages">Блок преимуществ</label>
+                            </li>
+                            <li class="filter-option">
+                                <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="news" id="filter-news" checked>
+                                <label for="filter-news">Новости</label>
+                            </li> 
+                            <li class="filter-option">
+                                <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="gallery" id="filter-gallery">
+                                <label for="filter-gallery">Галерея</label>
+                            </li>
+                            <li class="filter-option">
+                                <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="basket" id="filter-basket">
+                                <label for="filter-basket">Корзина</label>
+                            </li>                        
+                        </ul>    
+                    </fieldset>
+                    <button class="button button-filters" type="submit">Показать</button> 
+                </form>    
             </section>
 
             <section class="sort">
@@ -54,12 +105,12 @@
                     </li>
                     <li>
                         <a class="sort-iteam-current">
-                            <span class="visually-hidden">низ</span>
+                            <span class="visually-hidden">По убыванию</span>
                         </a>
                     </li>
                     <li>
                         <a href="#">
-                            <span class="visually-hidden">верх</span>
+                            <span class="visually-hidden">По возрастанию</span>
                         </a>
                     </li>
                 </ul>
@@ -133,18 +184,20 @@
                 </ul>
                <!-- Пагинация страниц --> 
                 <ul class="pagination-list">
-                      <li class="pagination-item pagination-item-current">
-                          <a>1</a>
-                      </li>
-                      <li class="pagination-item">
-                          <a href="#">2</a>
-                      </li>
-                      <li class="pagination-item">
-                          <a href="#">3</a>
-                      </li>
-                      <li class="pagination-item">
-                          <a href="#">Следущая</a>
-                      </li>
+                    <h2 class="visually-hidden">Страница</h2>
+                    
+                    <li class="pagination-item pagination-item-current">
+                        <a>1</a>
+                    </li>
+                    <li class="pagination-item">
+                        <a href="#">2</a>
+                    </li>
+                    <li class="pagination-item">
+                        <a href="#">3</a>
+                    </li>
+                    <li class="pagination-item">
+                        <a href="#">следующая</a>
+                    </li>
                   </ul>
             </section>
             
@@ -152,7 +205,7 @@
             
                 <h2 class="visually-hidden">Контактная информация</h2>
              
-                <img src="img/map-marker.png" width="1440" height="416" alt="Карта">
+                <img src="img/map-marker.png" width="1440" height="416" alt="индекс 191186, Санкт-Петербург, ул.Б.Конюшенная, д.19/8, тел. +7(812)275-75-75">
 
                 <div class="address">
                     <b>Nerds design studio</b>
@@ -163,12 +216,13 @@
                     <p>
                         <a href="tel:+78122757575">тел. +7 (812) 275-75-75</a>
                     </p>
-                    <a class="button" href="#">Напишите нам</a>
+                    <button class="button buttin-write" type="button">Напишите нам</button>
                 </div>
             </section> 
             
             <footer class="main-footer">
                 <div class="footer-social">
+                    <h2 class="visually-hidden">Социальные сети</h2>
                     <ul class="footer-social-list">
                         <li>
                             <a class="social-button" href="#">
@@ -195,9 +249,24 @@
         <!-- Модальное окно "Напишите нам" -->
         <section class="modal-write">
             <h2>Напишите нам</h2>
-            <!-- Здесь будет форма -->
-            <span class="modal-close">x</span>
+            
+            <form class="write-form" action="https://echo.htmlacademy.ru" method="post">
+                <p class="write-item">
+                    <label for="write-name">Ваше имя:</label>
+                    <input id="write-name" type="text" name="name" value="" placeholder="Имя Фамилия" required>
+                    <label for="write-email">Ваш e-mail:</label>
+                    <input id="write-email" type="email" name="email" value="" placeholder="email@example.com" required>
+                </p>
+                <p class="write-item">    
+                    <label for="write-text">Текст письма:</label>
+                    <textarea id="write-text" name="text" maxlength="160" rows="5" cols="70">В свободной форме
+                    </textarea>    
+                <p>    
+                <button class="button button-modal-write" type="submit">Отправить</button>
+            </form>
+ 
+            <button class="button button-modal-close visually-hidden" type="button">Закрыть</button>
         </section>
-     
+        
     </body>
 </html>

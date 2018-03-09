@@ -165,7 +165,7 @@
             
                 <h2 class="visually-hidden">Контактная информация</h2>
              
-                <img src="img/map-marker.png" width="1440" height="416" alt="Карта">
+                <img src="img/map-marker.png" width="1440" height="416" alt="индекс 191186, Санкт-Петербург, ул.Б.Конюшенная, д.19/8, тел. +7(812)275-75-75">
 
                 <div class="address">
                     <b>Nerds design studio</b>
@@ -176,12 +176,13 @@
                     <p>
                         <a href="tel:+78122757575">тел. +7 (812) 275-75-75</a>
                     </p>
-                    <a class="button" href="#">Напишите нам</a>
+                    <button class="button buttin-write" type="button">Напишите нам</button>
                 </div>
             </section> 
             
             <footer class="main-footer">
                 <div class="footer-social">
+                    <h2 class="visually-hidden">Социальные сети</h2>
                     <ul class="footer-social-list">
                         <li>
                             <a class="social-button" href="#">
@@ -208,8 +209,23 @@
         <!-- Модальное окно "Напишите нам" -->
         <section class="modal-write">
             <h2>Напишите нам</h2>
-            <!-- Здесь будет форма -->
-            <span class="modal-close">x</span>
+            
+            <form class="write-form" action="https://echo.htmlacademy.ru" method="post">
+                <p class="write-item">
+                    <label for="write-name">Ваше имя:</label>
+                    <input id="write-name" type="text" name="name" value="" placeholder="Имя Фамилия" required>
+                    <label for="write-email">Ваш e-mail:</label>
+                    <input id="write-email" type="email" name="email" value="" placeholder="email@example.com" required>
+                </p>
+                <p class="write-item">    
+                    <label for="write-text">Текст письма:</label>
+                    <textarea id="write-text" name="text" maxlength="160" rows="5" cols="70">В свободной форме
+                    </textarea>    
+                <p>    
+                <button class="button button-modal-write" type="submit">Отправить</button>
+            </form>
+ 
+            <button class="button button-modal-close visually-hidden" type="button">Закрыть</button>
         </section>
         
     </body>
