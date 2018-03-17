@@ -39,16 +39,17 @@
                     <h2 class="visually-hidden">Фильтры</h2>
                     <fieldset>
                         <legend>Стоимость:</legend>
-                        <label class="visually-hidden" for="filter-cost">Выбор из диапазона</label>
-                        
             <!-- javascript -->
-                        От
-                        <input class="visually-hidden" type="text" id="filter-cost" name="cost" min="0" max="15000" step="1">
-                        До
-                        <input class="visually-hidden" type="text" id="filter-cost" name="cost" min="0" max="15000" step="1">
+                        <div>
+                            <label for="range-min">От</label>
+                            <input class="visually-hidden" type="text" id="range-min" name="cost">
+                            <label for="range-max">До</label>
+                            <input class="visually-hidden" type="text" id="range-max" name="cost">
+                            <div id="range-slider"></div>
+                        </div>    
                     </fieldset>
                     <fieldset>
-                        <legend>Сетка:</legend>
+                        <legend>Сетка:</legend> 
                         <ul class="option-radio-list">
                             <li class="option-radio-iteam">
                                 <input class="visually-hidden filter-input filter-input-radio" type="radio" name="grid-group" value="adaptive" id="filter-adaptive" checked>
@@ -246,8 +247,7 @@
                 </p>
                 <p class="write-area">    
                     <label for="write-text">Текст письма:</label>
-                    <textarea id="write-text" name="text" maxlength="160" rows="5" cols="70">В свободной форме
-                    </textarea>    
+                    <textarea id="write-text" name="text" maxlength="160" placeholder="В свободной форме" cols="70" rows="5" required></textarea>    
                 <p>    
                 <button class="button button-modal-write" type="submit">Отправить</button>
             </form>
