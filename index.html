@@ -3,6 +3,9 @@
     <head>
         <meta charset="utf-8">
         <title>Веб-студия «Nerds»</title>
+        <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
+        <link href="css/normalize.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
     </head>
     <body>
         <header class="main-header">
@@ -30,92 +33,83 @@
             </nav>
         </header>
         <main>
-            
             <h1 class="visually-hidden">Веб-студия «Nerds»</h1>
-            
-            <section class="top-slider">
-                
+            <section class="slider">
                 <h2 class="visually-hidden">Наши преимущества</h2>
-                
-                <ul class="top-slider-banner">
-                    <li>
+                <ul class="slider-list">
+                    <li class="slider-item">
                         <div>   
-                            <b>Долго, дорого, скрупулезно</b>
+                            <b>Долго, дорого, скрупулезно.</b>
                             <p>Математически выверенный дизайн для вашего сайта или мобильного приложения.</p>
                         </div>    
                             <img src="img/slide1.png" width="698" height="413" alt="">
                             <a class="button" href="#">Узнать больше</a>
                     </li>
-                    <li>
+                    <li class="slider-item">
                         <div>
                             <b>Любим математику как никто другой</b>
                             <p>Никакого креатива, только математические формулы для расчета идеальных пропорций.</p>
                         </div>    
-                            <img src="img/slide2.png" width="663" height="430" alt="">                           
+                            <img src="img/slide2.png" width="663" height="430" alt="">
                             <a class="button" href="#">Узнать больше</a>
                     </li>
-                    <li>
+                    <li class="slider-item">
                         <div>
                             <b>Только ночь, только хардкор</b>
                             <p>Работать днем, как все? Мы против этого. Ближе к полуночи работа только начинается.</p>
                         </div>    
-                            <img src="img/slide3.png" width="759" height="411" alt="">                            
+                            <img src="img/slide3.png" width="759" height="411" alt="">
                             <a class="button" href="#">Узнать больше</a>
                     </li>
                 </ul>
             </section>
-            
             <section class="catalog-services">
-                
                 <h2 class="visually-hidden">Каталог услуг</h2>
-                
                 <ul class="catalog-services-list">
-                    <li>
+                    <li class="catalog-services-item">
                         <h3>Веб сайты</h3>
                         <img src="img/illustration-1.png" width="300" height="146" alt="Веб сайты">
                         <p>
                             Мир никогда не будет прежним после того как увидит ваш сайт!
                         </p>
-                        <a class="button button-catalog" href="#">Заказать</a>
+                        <a class="button" href="#">Заказать</a>
                     </li>
-                    <li>
+                    <li class="catalog-services-item">
                         <h3>Приложения</h3>
                         <img src="img/illustration-2.png" width="300" height="146" alt="Приложения">
                         <p>
                             Покорите топ-10 приложений в AppStore и Google Play
                         </p>
-                        <a class="button button-catalog button-green" href="#">Заказать</a>
+                        <a class="button button-green" href="#">Заказать</a>
                     </li>
-                    <li>
+                    <li class="catalog-services-item">
                         <h3>Презентации</h3>
                         <img src="img/illustration-3.png" width="300" height="146" alt="Презентации">
                         <p>
                             Вы даже не подозреваете, насколько вы изумительны!
                         </p>
-                        <a class="button button-catalog button-yellow" href="#">Заказать</a>
+                        <a class="button button-yellow" href="#">Заказать</a>
                     </li>
                 </ul>
             </section>
-            
-            <section class="about-us">
-                
+            <section class="about">
                 <h2 class="visually-hidden">О нас</h2>
-                <div class="about-us-left">
+                <div class="about-left">
                     <b>Мы — маленькая, но гордая дизайн-студия из Краснодара.</b>
                     <p>
                         Исповедуем принципы минимализма и чистоты. Ставим математический расчет превыше креатива. Работаем не покладая рук, как роботы.
                     </p>
-                    <b class="about-us-title">Выполняем заказы на разработку:</b>
+                    <b class="about-title">Выполняем заказы на разработку:</b>
                     <ul class="services">
                         <li>Веб-сайтов любой сложности</li>
                         <li>Мобильных приложений для iOS и Android</li>
                         <li>Слайдшоу и видео для корпоративных презентаций</li>
                     </ul>
                 </div>
-                <div class="about-us-right">
+                <div class="about-right">
                     <table class="info">
                         <caption>
-                            <b class="about-us-title">с 2004 года любим точность во всем:</b>
+                            с 2004 года любим точность во всем:
                         </caption>
                         <tr>
                             <td>146<sup>%</sup></td>
@@ -132,11 +126,8 @@
                     </table>                   
                 </div>
             </section>
-            
             <section class="partners">
-                
                 <h2 class="visually-hidden">Партнеры</h2>
-                
                 <ul class="partners-list">
                     <li>
                         <a href="https://htmlacademy.ru/intensive/htmlcss">
@@ -160,13 +151,9 @@
                     </li>
                 </ul>
             </section>
-            
             <section class="contacts">
-            
                 <h2 class="visually-hidden">Контактная информация</h2>
-             
                 <img src="img/map-marker.png" width="1440" height="416" alt="индекс 191186, Санкт-Петербург, ул.Б.Конюшенная, д.19/8, тел. +7(812)275-75-75">
-
                 <div class="address">
                     <b>Nerds design studio</b>
                     <p>
@@ -176,28 +163,21 @@
                     <p>
                         <a href="tel:+78122757575">тел. +7 (812) 275-75-75</a>
                     </p>
-                    <button class="button buttin-write" type="button">Напишите нам</button>
+                    <button class="button button-write" type="button">Напишите нам</button>
                 </div>
             </section> 
-            
             <footer class="main-footer">
                 <div class="footer-social">
                     <h2 class="visually-hidden">Социальные сети</h2>
                     <ul class="footer-social-list">
-                        <li>
-                            <a class="social-button" href="#">
-                                <span class="visually-hidden">Вконтакте</span>
-                            </a>
+                        <li class="button social-button social-vk">
+                            <a href="#" aria-label="Вконтакте"/>
                         </li>
-                        <li>
-                            <a class="social-button" href="#">
-                                <span class="visually-hidden">Фейсбук</span>
-                            </a>
+                        <li class="button social-button social-fb">
+                            <a href="#" aria-label="Фейсбук"/>
                         </li>
-                        <li>
-                            <a class="social-button" href="#">
-                                <span class="visually-hidden">Инстаграм</span>
-                            </a>
+                        <li class="button social-button social-inst">
+                            <a class="social-button" href="#" aria-label="Инстаграм"/>
                         </li>
                     </ul>
                 </div>
@@ -205,27 +185,24 @@
                 <p>Скидка 10% для друзей из социальных сетей.</p>
             </footer>
         </main>
-        
         <!-- Модальное окно "Напишите нам" -->
         <section class="modal-write">
             <h2>Напишите нам</h2>
-            
-            <form class="write-form" action="https://echo.htmlacademy.ru" method="post">
+            <form class="write-form" action="https://echo.htmlacademy.ru" method="get">
                 <p class="write-item">
                     <label for="write-name">Ваше имя:</label>
                     <input id="write-name" type="text" name="name" value="" placeholder="Имя Фамилия" required>
                     <label for="write-email">Ваш e-mail:</label>
                     <input id="write-email" type="email" name="email" value="" placeholder="email@example.com" required>
                 </p>
-                <p class="write-item">    
+                <p class="write-area">    
                     <label for="write-text">Текст письма:</label>
                     <textarea id="write-text" name="text" maxlength="160" rows="5" cols="70">В свободной форме
                     </textarea>    
                 <p>    
                 <button class="button button-modal-write" type="submit">Отправить</button>
             </form>
- 
-            <button class="button button-modal-close visually-hidden" type="button">Закрыть</button>
+            <button class="button-modal-close" type="button" aria-label="Закрыть"></button>
         </section>
         
     </body>
