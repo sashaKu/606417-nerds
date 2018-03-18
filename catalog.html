@@ -42,9 +42,9 @@
             <!-- javascript -->
                         <div>
                             <label for="range-min">От</label>
-                            <input class="visually-hidden" type="text" id="range-min" name="cost">
+                            <input type="text" id="range-min" name="cost" value="">
                             <label for="range-max">До</label>
-                            <input class="visually-hidden" type="text" id="range-max" name="cost">
+                            <input type="text" id="range-max" name="cost" value="">
                             <div id="range-slider"></div>
                         </div>    
                     </fieldset>
@@ -60,7 +60,7 @@
                                 <label for="filter-fixed">Фиксированная</label>
                             </li>
                             <li class="option-radio-iteam">
-                                <input class="visually-hidden filter-input filter-input-radio" type="radio" name="grid-group" value="rubber" id="option-iteam">
+                                <input class="visually-hidden filter-input filter-input-radio" type="radio" name="grid-group" value="rubber" id="filter-rubber">
                                 <label for="filter-rubber">Резиновая</label>
                             </li>
                         </ul>
@@ -183,8 +183,8 @@
                 </ul>
                 
                <!-- Пагинация страниц --> 
+                <h2 class="visually-hidden">Страница</h2>
                 <ul class="pagination-list">
-                    <h2 class="visually-hidden">Страница</h2>
                     <li class="pagination-item pagination-item-current">
                         <a>1</a>
                     </li>
@@ -197,7 +197,7 @@
                     <li class="pagination-item">
                         <a href="#">следующая</a>
                     </li>
-                  </ul>
+                </ul>
             </section>
             <section class="contacts">
                 <h2 class="visually-hidden">Контактная информация</h2>
@@ -219,13 +219,13 @@
                     <h2 class="visually-hidden">Социальные сети</h2>
                     <ul class="footer-social-list">
                         <li class="button social-button social-vk">
-                            <a href="#" aria-label="Вконтакте"/>
+                            <a href="#" aria-label="Вконтакте"></a>
                         </li>
                         <li class="button social-button social-fb">
-                            <a href="#" aria-label="Фейсбук"/>
+                            <a href="#" aria-label="Фейсбук"></a>
                         </li>
                         <li class="button social-button social-inst">
-                            <a class="social-button" href="#" aria-label="Инстаграм"/>
+                            <a class="social-button" href="#" aria-label="Инстаграм"></a>
                         </li>
                     </ul>
                 </div>
