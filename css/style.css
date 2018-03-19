@@ -460,8 +460,6 @@ a {
     color: rgba(68,68,68,0.5);
 }
 
-/////
-
 .write-form input:focus::-webkit-input-placeholder {
     opacity: 1;
     font-family: 'Roboto', Arial, sans-serif;
