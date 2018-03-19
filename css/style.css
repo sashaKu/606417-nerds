@@ -460,15 +460,76 @@ a {
     color: rgba(68,68,68,0.5);
 }
 
+/////
+
+.write-form input:focus::-webkit-input-placeholder {
+    opacity: 1;
+    font-family: 'Roboto', Arial, sans-serif;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 400;
+    color: rgba(68,68,68,1);
+}
+.write-form input:focus::-moz-placeholder {
+    opacity: 1;
+    font-family: 'Roboto', Arial, sans-serif;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 400;
+    color: rgba(68,68,68,1);    
+}
+.write-form input:focus:-ms-input-placeholder {
+    opacity: 1;
+    font-family: 'Roboto', Arial, sans-serif;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 400;
+    color: rgba(68,68,68,1);    
+}
+.write-form textarea:focus::-webkit-input-placeholder {
+    opacity: 1;
+    font-family: 'Roboto', Arial, sans-serif;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 400;
+    color: rgba(68,68,68,1);
+}
+.write-form textarea:focus::-moz-placeholder {
+    opacity: 1;
+    font-family: 'Roboto', Arial, sans-serif;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 400;
+    color: rgba(68,68,68,1);
+}
+.write-form textarea:focus:-ms-input-placeholder {
+    opacity: 1;
+    font-family: 'Roboto', Arial, sans-serif;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 400;
+    color: rgba(68,68,68,1);
+}
+
 .write-form input[type="text"],
 .write-form input[type="email"],
 .write-form textarea {
+    font-family: 'Roboto', Arial, sans-serif;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 400;
+    color: rgba(68,68,68,0.5);    
     border: 2px solid #d7dcde;
 }
 
 .write-form input[type="text"]:hover,
 .write-form input[type="email"]:hover,
 .write-form textarea:hover {
+    font-family: 'Roboto', Arial, sans-serif;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 400;
+    color: rgba(68,68,68,0.5);
     border: 2px solid #b4b9bb;
 }
 
