@@ -153,18 +153,17 @@
             </section>
             <section class="contacts">
                 <h2 class="visually-hidden">Контактная информация</h2>
-                <img src="img/map2.png" width="1202" height="417" alt="индекс 191186, Санкт-Петербург, ул.Б.Конюшенная, д.19/8, тел. +7(812)275-75-75">
-                <div class="address">
-                    <b>Nerds design studio</b>
-                    <p>
-                        191186, Санкт-Петербург,<br> 
-                        ул. Б. Конюшенная, д. 19/8
-                    </p>
-                    <p class="phone">
-                        <a href="tel:+78122757575">тел. +7 (812) 275-75-75</a>
-                    </p>
-                    <button class="button button-write" type="button">Напишите нам</button>
-                </div>
+                <img class="contacts-button-map" src="img/map2.png" width="1202" height="417" alt="индекс 191186, Санкт-Петербург, ул.Б.Конюшенная, д.19/8, тел. +7(812)275-75-75">
+                <div class="address-wraper">
+                    <div class="address">
+                        <b>Nerds design studio</b>
+                        <p>191186, Санкт-Петербург,<br>ул. Б. Конюшенная, д. 19/8</p>
+                        <p class="phone">
+                            <a href="tel:+78122757575">тел. +7 (812) 275-75-75</a>
+                        </p>
+                        <button class="button button-write" type="button">Напишите нам</button>
+                    </div>
+                </div>    
             </section> 
             <footer class="main-footer container">
                     <h2 class="visually-hidden">Социальные сети</h2>
@@ -217,6 +216,97 @@
             </form>
             <button class="button-modal-close" type="button" aria-label="Закрыть"></button>
             </div>
-        </section> 
+        </section>
+        
+        <script>
+            var link = document.querySelector(".button-write");
+            var popup = document.querySelector(".modal-write");
+            var close = popup.querySelector(".button-modal-close");
+            var name = popup.querySelector("[name=name]");
+            var email = popup.querySelector("[name=email]");
+            var text = popup.querySelector("[name=text]");
+            var form = popup.querySelector("form");
+            
+            var isStorageSupportName = true;
+            var storageName = "";
+            try {
+                storageName = localStorage.getItem("name");
+            } catch (err) {
+                isStorageSupportName = false;
+            }
+            
+            var isStorageSupportEmail = true;
+            var storageEmail = "";
+            try {
+                storageEmail = localStorage.getItem("email");
+            } catch (err) {
+                isStorageSupportEmail = false;
+            } 
+            
+            var isStorageSupportText = true;
+            var storageText = "";
+            try {
+                storageText = localStorage.getItem("text");
+            } catch (err) {
+                isStorageSupportText = false;
+            }            
+            
+            link.addEventListener("click", function (evt) {
+                evt.preventDefault();
+                popup.classList.add("modal-show");
+                
+                    if (storageName) {
+                        name.value = storageName;
+                        email.focus();
+                    }
+                    else if (storageEmail) {
+                        email.value = storageEmail;
+                        text.focus();
+                    }
+                    else if (storageText) {
+                        text.value = storageText;
+                        text.focus();
+                    } else {
+                        name.focus();
+                    }            
+                name.focus();
+            });
+            
+            close.addEventListener("click", function (evt) {
+                evt.preventDefault();
+                popup.classList.remove("modal-show");
+                popup.classList.remove("modal-error");
+            });
+            
+            form.addEventListener("submit", function (evt) {
+                evt.preventDefault();
+                    if (!name.value || !email.value || !text.value) {
+                        evt.preventDefault();
+                        popup.classList.remove("modal-error");
+                        popup.offsetWidth = popup.offsetWidth;                        
+                        popup.classList.add("modal-error");
+                    } else {
+                        if (isStorageSupportName) {
+                            localStorage.setItem("name", name.value);
+                        }
+                        if (isStorageSupportEmail) {
+                            localStorage.setItem("email", email.value);
+                        }
+                        if (isStorageSupportText) {
+                            localStorage.setItem("text", text.value);
+                        }                
+                    }
+            });
+            
+            window.addEventListener("keydown", function (evt) {
+                if (evt.keyCode === 27) {
+                    evt.preventDefault();
+                if (popup.classList.contains("modal-show")) {
+                    popup.classList.remove("modal-show");
+                    popup.classList.remove("modal-error");
+                    }
+                }   
+            });
+        </script>        
     </body>
 </html>
