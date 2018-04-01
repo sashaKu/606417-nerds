@@ -4,7 +4,7 @@ body {
 
     min-width: 1200px;
     
-    font-family: 'Roboto', Arial, sans-serif;
+    font-family: "Roboto", Arial, sans-serif;
     font-size: 16px;
     line-height: 24px;
     font-weight: 400;
@@ -429,9 +429,7 @@ img {
     align-items: flex-end;
 }
 
-.about::after {
-    position: absolute;
-    
+.about::before {    
     content: "";
     
     width: 1160px;
@@ -657,8 +655,8 @@ img {
     margin: 0 auto;
     
     position: relative;
-    top: -370px;
-    left: -422px;
+    top: -371px;
+    left: -421px;
 }
 
 .address {
@@ -810,7 +808,7 @@ img {
     padding: 8px 10px;
     margin-left: 8px;
   
-    font-family: Roboto, Arial, sans-serif;
+    font-family: "Roboto", Arial, sans-serif;
     font-size: 16px;
     font-weight: 400;
     text-align: center;
@@ -826,7 +824,7 @@ img {
 }
 
 .filters input[type="text"] {
-    font-family: 'Roboto', Arial, sans-serif;
+    font-family: "Roboto", Arial, sans-serif;
     font-size: 16px;
     line-height: 22px;
     font-weight: 400;    
@@ -1046,8 +1044,9 @@ img {
 }
 
 .catalog-templates-list {
+    width: 760px;
     margin: 0;
-    margin-bottom: 41px;
+    margin-bottom: 38px;
     padding: 0;
     
     display: flex;
@@ -1066,9 +1065,8 @@ img {
 
 .catalog-templates-list li {
     width: 357px;
-    height: 572px;
     margin-bottom: 35px;
-    padding-top: 40px;
+    padding-top: 37px;
     
     position: relative;
     border: 1px solid #e5e5e5;
@@ -1119,6 +1117,11 @@ img {
     font-size: 16px;
     line-height: 20px;
     color: #666666;
+}
+
+.cut-text {
+    max-height: 576px;
+    overflow: auto;
 }
 
 .move-grey .button {
@@ -1294,16 +1297,25 @@ img {
     }
 }
 
+.modal {
+    width: 100%;
+	height: 100vh;
+    
+	position: fixed; 
+    top:0;
+    left:0;
+    
+	display: none;
+	justify-content: center; 
+	align-items: center;
+    
+    z-index: 100;
+}
+
 .modal-write {
     width: 960px;
     height: 590px;
-
-    position: fixed;
-    
-    display: none;
-    bottom: 773px;
-    left: 130px; 
-    position: relative;
+    display: block;
     background-color: #ffffff;
     box-shadow: 0 20px 80px -4px #000101;
 }
@@ -1313,7 +1325,7 @@ img {
 }
 
 .modal-show {
-    display: block;
+    display: flex;
     animation: bounce 0.6s;
 }
 
@@ -1372,7 +1384,7 @@ img {
 /* стилизация placeholder */
 .write-form input::-webkit-input-placeholder {
     opacity: 1;
-    font-family: 'Roboto', Arial, sans-serif;
+    font-family: "Roboto", Arial, sans-serif;
     font-size: 16px;
     line-height: 20px;
     font-weight: 400;
@@ -1380,7 +1392,7 @@ img {
 }
 .write-form input::-moz-placeholder {
     opacity: 1;
-    font-family: 'Roboto', Arial, sans-serif;
+    font-family: "Roboto", Arial, sans-serif;
     font-size: 16px;
     line-height: 20px;
     font-weight: 400;
@@ -1388,7 +1400,7 @@ img {
 }
 .write-form input:-ms-input-placeholder {
     opacity: 1;
-    font-family: 'Roboto', Arial, sans-serif;
+    font-family: "Roboto", Arial, sans-serif;
     font-size: 16px;
     line-height: 20px;
     font-weight: 400;
@@ -1396,7 +1408,7 @@ img {
 }
 .write-form textarea::-webkit-input-placeholder {
     opacity: 1;
-    font-family: 'Roboto', Arial, sans-serif;
+    font-family: "Roboto", Arial, sans-serif;
     font-size: 16px;
     line-height: 20px;
     font-weight: 400;
@@ -1404,7 +1416,7 @@ img {
 }
 .write-form textarea::-moz-placeholder {
     opacity: 1;
-    font-family: 'Roboto', Arial, sans-serif;
+    font-family: "Roboto", Arial, sans-serif;
     font-size: 16px;
     line-height: 20px;
     font-weight: 400;
@@ -1412,7 +1424,7 @@ img {
 }
 .write-form textarea:-ms-input-placeholder {
     opacity: 1;
-    font-family: 'Roboto', Arial, sans-serif;
+    font-family: "Roboto", Arial, sans-serif;
     font-size: 16px;
     line-height: 20px;
     font-weight: 400;
@@ -1421,7 +1433,7 @@ img {
 
 .write-form input:focus::-webkit-input-placeholder {
     opacity: 1;
-    font-family: 'Roboto', Arial, sans-serif;
+    font-family: "Roboto", Arial, sans-serif;
     font-size: 16px;
     line-height: 20px;
     font-weight: 400;
@@ -1429,7 +1441,7 @@ img {
 }
 .write-form input:focus::-moz-placeholder {
     opacity: 1;
-    font-family: 'Roboto', Arial, sans-serif;
+    font-family: "Roboto", Arial, sans-serif;
     font-size: 16px;
     line-height: 20px;
     font-weight: 400;
@@ -1437,7 +1449,7 @@ img {
 }
 .write-form input:focus:-ms-input-placeholder {
     opacity: 1;
-    font-family: 'Roboto', Arial, sans-serif;
+    font-family: "Roboto", Arial, sans-serif;
     font-size: 16px;
     line-height: 20px;
     font-weight: 400;
@@ -1445,7 +1457,7 @@ img {
 }
 .write-form textarea:focus::-webkit-input-placeholder {
     opacity: 1;
-    font-family: 'Roboto', Arial, sans-serif;
+    font-family: "Roboto", Arial, sans-serif;
     font-size: 16px;
     line-height: 20px;
     font-weight: 400;
@@ -1453,7 +1465,7 @@ img {
 }
 .write-form textarea:focus::-moz-placeholder {
     opacity: 1;
-    font-family: 'Roboto', Arial, sans-serif;
+    font-family: "Roboto", Arial, sans-serif;
     font-size: 16px;
     line-height: 20px;
     font-weight: 400;
@@ -1461,7 +1473,7 @@ img {
 }
 .write-form textarea:focus:-ms-input-placeholder {
     opacity: 1;
-    font-family: 'Roboto', Arial, sans-serif;
+    font-family: "Roboto", Arial, sans-serif;
     font-size: 16px;
     line-height: 20px;
     font-weight: 400;
@@ -1474,7 +1486,7 @@ img {
     padding: 15px 15px;
     box-sizing: border-box;
     
-    font-family: 'Roboto', Arial, sans-serif;
+    font-family: "Roboto", Arial, sans-serif;
     font-size: 16px;
     line-height: 20px;
     font-weight: 400;
@@ -1497,7 +1509,7 @@ img {
 .write-form input[type="email"]:focus,
 .write-form textarea:focus {
     outline: none;
-    font-family: 'Roboto', Arial, sans-serif;
+    font-family: "Roboto", Arial, sans-serif;
     font-size: 16px;
     line-height: 20px;
     font-weight: 400;
@@ -1513,9 +1525,9 @@ img {
     width: 25px;
     height: 25px;
     
-    position: absolute;
-    top: 78px;
-    right: 88px;
+    position: relative;
+    bottom: 430px;
+    left: 750px;
     
     border: none;
     background-color: #ffffff;
