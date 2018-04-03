@@ -544,7 +544,7 @@ img {
 }
 
 .partners-list {
-    min-height: 180px;
+    height: 180px;
     margin: 0;
     padding: 0;
     display: flex;
@@ -958,21 +958,21 @@ img {
     color: #000000;
 }
 
-.sort-list a {
+.sort-iteam a {
     padding-right: 25px;
     display: inline-block;
     vertical-align: top;
     opacity: 0.3;
 }
 
-.sort-list a:hover:not(.sort-iteam-current),
-.sort-list a:focus {
+.sort-iteam a:not(.sort-iteam-current):hover,
+.sort-iteam a:not(.sort-iteam-current):focus {
     opacity: 0.6;
 }
 
-.sort-list .sort-iteam-current,
-.sort-list a:active {
-    opacity: 1;
+.sort-iteam a:not(.sort-iteam-current):active,
+.sort-iteam .sort-iteam-current {
+   opacity: 1;
 }
 
 .sort-iteam div {
