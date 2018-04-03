@@ -5,7 +5,7 @@
         <title>Веб-студия «Nerds»</title>
         <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
         <link href="css/normalize.css" rel="stylesheet">
-        <link href="css/style.min.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
     </head>
     <body>
         <header class="main-header">
@@ -34,7 +34,6 @@
         </header>
         <main>
             <h1 class="visually-hidden">Веб-студия «Nerds»</h1>
-            
                 <section class="slider">
                     <div class="container">
                         <h2 class="visually-hidden">Преимущества</h2>
@@ -114,9 +113,9 @@
                             с 2004 года любим точность во всем:
                         </caption>
                         <tr>
-                            <td>146<sub>%</sub></td>
-                            <td>100<sub>%</sub></td>
-                            <td>50<sub>%</sub></td>
+                            <td class="info-item">146<sub>%</sub></td>
+                            <td class="info-item">100<sub>%</sub></td>
+                            <td class="info-item">50<sub>%</sub></td>
                         </tr>
                         <tr>
                             <th>Уровень самоотдачи</th>
@@ -129,22 +128,22 @@
             <section class="partners container">
                 <h2 class="visually-hidden">Партнеры</h2>
                 <ul class="partners-list">
-                    <li>
+                    <li class="partners-item">
                         <a href="https://htmlacademy.ru/intensive/htmlcss">
                             <img src="img/logo-1.png" width="200" height="70" alt="«Html academy»">
                         </a>
                     </li>
-                    <li>
+                    <li class="partners-item">
                         <a href="#">
                             <img src="img/logo-2.png" width="209" height="87" alt="«Borodinski»">
                         </a>
                     </li>
-                    <li>
+                    <li class="partners-item">
                         <a href="#">
                             <img src="img/logo-3.png" width="185" height="52" alt="«Pink»">
                         </a>
                     </li>
-                    <li>
+                    <li class="partners-item">
                         <a href="#">
                             <img src="img/logo-4.png" width="173" height="84" alt="«Mishka»">
                         </a>
@@ -157,10 +156,12 @@
                 <div class="address-wraper">
                     <div class="address">
                         <b>Nerds design studio</b>
-                        <p>191186, Санкт-Петербург,<br>ул. Б. Конюшенная, д. 19/8</p>
-                        <p class="phone">
-                            <a href="tel:+78122757575">тел. +7 (812) 275-75-75</a>
-                        </p>
+                        <div class="address-text">
+                            <p>191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
+                            <p class="phone">
+                                <a href="tel:+78122757575">тел. +7 (812) 275-75-75</a>
+                            </p>
+                        </div>    
                         <button class="button button-write" type="button">Напишите нам</button>
                     </div>
                 </div>    
