@@ -152,6 +152,7 @@
             </section>
             <section class="contacts">
                 <h2 class="visually-hidden">Контактная информация</h2>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6011566070483!2d30.32337900487535!3d59.93876013042036!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1523789704077" width="1202" height="417" frameborder="0" style="border:0" allowfullscreen></iframe>
                 <img class="contacts-button-map" src="img/map2.png" width="1202" height="417" alt="индекс 191186, Санкт-Петербург, ул.Б.Конюшенная, д.19/8, тел. +7(812)275-75-75">
                 <div class="address-wraper">
                     <div class="address">
@@ -162,7 +163,7 @@
                                 <a href="tel:+78122757575">тел. +7 (812) 275-75-75</a>
                             </p>
                         </div>    
-                        <button class="button button-write" type="button">Напишите нам</button>
+                        <a class="button button-write" href="form.html">Напишите нам</a>
                     </div>
                 </div>    
             </section> 
@@ -194,7 +195,7 @@
                 </div>    
             </footer> 
         </main>
-  <!--       Модальное окно "Напишите нам" -->
+  <!-- Модальное окно "Напишите нам" -->
         <div class="modal">
         <section class="modal-write">
             <div class="modal-wriper">
@@ -203,23 +204,24 @@
                 <div class="write-item">
                     <div>
                         <label for="write-name">Ваше имя:</label>
-                        <input id="write-name" type="text" name="name" value="" placeholder="Имя Фамилия" required>
+                        <input id="write-name" type="text" name="nickname" value="" placeholder="Имя Фамилия">
                     </div>
                     <div>
                         <label for="write-email">Ваш e-mail:</label>
-                        <input id="write-email" type="email" name="email" value="" placeholder="email@example.com" required>
+                        <input id="write-email" type="email" name="email" value="" placeholder="email@example.com">
                     </div>
                 </div>
                 <div class="write-area">    
                     <label for="write-text">Текст письма:</label>
-                    <textarea id="write-text" name="text" maxlength="160" placeholder="В свободной форме" cols="70" rows="4" required></textarea>    
+                    <textarea id="write-text" name="text" maxlength="160" placeholder="В свободной форме" cols="70" rows="4"></textarea>    
                 </div>    
                 <button class="button button-modal-write" type="submit">Отправить</button>
             </form>
             <button class="button-modal-close" type="button" aria-label="Закрыть"></button>
             </div>
         </section>
-        </div>    
+        </div>
+        <div class="modal-overlay"></div>
         <script src="js/modal.min.js"></script>  
     </body>
 </html>

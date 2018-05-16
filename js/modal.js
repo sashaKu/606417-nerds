@@ -1,8 +1,10 @@
 
 var link = document.querySelector(".button-write");
 var popup = document.querySelector(".modal");
+var error = document.querySelector(".modal-write");
+var overlay = document.querySelector(".modal-overlay");
 var close = popup.querySelector(".button-modal-close");
-var name = popup.querySelector("[name=name]");
+var nickname = popup.querySelector("[name=nickname]");
 var email = popup.querySelector("[name=email]");
 var text = popup.querySelector("[name=text]");
 var form = popup.querySelector("form");
@@ -14,67 +16,127 @@ var isStorageSupportText = true;
 var storageText = "";
 
 try {
-    storageName = localStorage.getItem("name");
-} catch (err) {
-    isStorageSupportName = false;
-}
-
-try {
+    storageName = localStorage.getItem("nickname");
     storageEmail = localStorage.getItem("email");
-} catch (err) {
-    isStorageSupportEmail = false;
-} 
-
-try {
     storageText = localStorage.getItem("text");
 } catch (err) {
+    isStorageSupportName = false;
+    isStorageSupportEmail = false;
     isStorageSupportText = false;
 }            
 
-link.addEventListener("click", function (evt) {
+link.addEventListener("click", function(evt) {
     evt.preventDefault();
+        error.classList.remove("valid-form-text");
+        error.classList.remove("valid-form-email");        
+        error.classList.remove("valid-form");
     popup.classList.add("modal-show");
-    
-    if (storageName) {
-        name.value = storageName;
+    overlay.classList.add("modal-show-overlay");
+    if (storageName && !storageEmail && !storageText) {
+        nickname.value = storageName;
         email.focus();
     }
-    else if (storageEmail) {
+    else if (storageName && storageEmail && !storageText) {
+        nickname.value = storageName;
         email.value = storageEmail;
         text.focus();
     }
-    else if (storageText) {
+    else if (storageName && storageEmail && storageText) {
+        nickname.value = storageName;
+        email.value = storageEmail;        
         text.value = storageText;
         text.focus();
     } else {
-        name.focus();
+        nickname.focus();
     }            
-    name.focus();
 });
 
-close.addEventListener("click", function (evt) {
+close.addEventListener("click", function(evt) {
     evt.preventDefault();
     popup.classList.remove("modal-show");
-    popup.classList.remove("modal-error");
+    error.classList.remove("modal-error");
+    error.classList.remove("valid-form-text");
+    error.classList.remove("valid-form-email");
+    error.classList.remove("valid-form");
+    overlay.classList.remove("modal-show-overlay");
 });
 
-form.addEventListener("submit", function (evt) {
+form.addEventListener("submit", function(evt) {
     evt.preventDefault();
-    if (!name.value || !email.value || !text.value) {
-        evt.preventDefault();
-        popup.classList.remove("modal-error");
-        popup.offsetWidth = popup.offsetWidth;                        
-        popup.classList.add("modal-error");
+    if (!nickname.value && !email.value && !text.value) {
+        error.classList.remove("modal-error");
+        error.classList.remove("valid-form-text");
+        error.classList.remove("valid-form-email");        
+        error.classList.remove("valid-form");
+        error.offsetWidth = error.offsetWidth;
+        error.classList.add("modal-error");
+        error.classList.add("valid-form-text");
+        error.classList.add("valid-form-email");
+        error.classList.add("valid-form");
+    }
+    else if (!nickname.value && !email.value) {
+        error.classList.remove("modal-error");
+        error.classList.remove("valid-form-text");
+        error.classList.remove("valid-form-email");        
+        error.classList.remove("valid-form");        
+        error.offsetWidth = error.offsetWidth;
+        error.classList.add("modal-error");
+        error.classList.add("valid-form-text");
+        error.classList.add("valid-form-email");      
+    }
+    else if (!nickname.value && !text.value) {
+        error.classList.remove("modal-error");
+        error.classList.remove("valid-form-text");
+        error.classList.remove("valid-form-email");        
+        error.classList.remove("valid-form");
+        error.offsetWidth = error.offsetWidth;
+        error.classList.add("modal-error");
+        error.classList.add("valid-form-text");
+        error.classList.add("valid-form");        
+    }    
+    else if (!email.value && !text.value) {
+        error.classList.remove("modal-error");
+        error.classList.remove("valid-form-text");
+        error.classList.remove("valid-form-email");        
+        error.classList.remove("valid-form");
+        error.offsetWidth = error.offsetWidth;
+        error.classList.add("modal-error");
+        error.classList.add("valid-form-email");
+        error.classList.add("valid-form");
+    }
+    else if (!nickname.value) {
+        error.classList.remove("modal-error");
+        error.classList.remove("valid-form-text");
+        error.classList.remove("valid-form-email");        
+        error.classList.remove("valid-form");
+        error.offsetWidth = error.offsetWidth;
+        error.classList.add("modal-error");
+        error.classList.add("valid-form-text");       
+    }
+    else if (!email.value) {
+        error.classList.remove("modal-error");
+        error.classList.remove("valid-form-text");
+        error.classList.remove("valid-form-email");        
+        error.classList.remove("valid-form");      
+        error.offsetWidth = error.offsetWidth;
+        error.classList.add("modal-error");
+        error.classList.add("valid-form-email");       
+    }    
+    else if (!text.value) {
+        error.classList.remove("modal-error");        
+        error.classList.remove("valid-form-text");
+        error.classList.remove("valid-form-email");        
+        error.classList.remove("valid-form");
+        error.offsetWidth = error.offsetWidth;
+        error.classList.add("modal-error");
+        error.classList.add("valid-form");        
     } else {
-        if (isStorageSupportName) {
-            localStorage.setItem("name", name.value);
-        }
-        if (isStorageSupportEmail) {
+            error.classList.remove("valid-form-text");
+            error.classList.remove("valid-form-email");        
+            error.classList.remove("valid-form");
+            localStorage.setItem("nickname", nickname.value);
             localStorage.setItem("email", email.value);
-        }
-        if (isStorageSupportText) {
-            localStorage.setItem("text", text.value);
-        }                
+            localStorage.setItem("text", text.value);              
     }
 });
 
@@ -83,7 +145,11 @@ window.addEventListener("keydown", function (evt) {
         evt.preventDefault();
         if (popup.classList.contains("modal-show")) {
             popup.classList.remove("modal-show");
-            popup.classList.remove("modal-error");
+            error.classList.remove("modal-error");
+            error.classList.remove("valid-form-text");
+            error.classList.remove("valid-form-email");
+            error.classList.remove("valid-form");
+            overlay.classList.remove("modal-show-overlay");
         }
     }   
 });
